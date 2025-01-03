@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+  background: url('/media/homepage_background_cropped.jpg') center center fixed;
   background-size: contain;
   height: calc(100vh - 164px);
   color: #555;
@@ -19,12 +19,17 @@ body {
   width: 1.5rem;
 }
 
+.icon-nav {
+  height: 2.5rem;
+}
+
 .logo-font {
   text-transform: uppercase;
 }
 
 .main-logo-link {
   width: fit-content;
+  display: flex;
 }
 
 .shop-now-button {
