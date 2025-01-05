@@ -42,7 +42,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5004",
-    "name": "friendly name",
+    "name": "Kids Beanie",
     "description": "Discover the charm of youthful style with our latest collection featuring a boy in a vibrant red hat and a classic white shirt. This eye-catching ensemble is perfect for any occasion, combining playful energy with timeless elegance. The bright red hat adds a pop of color, making it a standout choice for outdoor adventures or casual outings. Dress your little one in this delightful outfit and let them shine with confidence and flair!",
     "price": 9.99,
     "category": 2,
@@ -55,7 +55,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5005",
-    "name": "friendly name",
+    "name": "Kids Bobble Hat",
     "description": "Elevate your winter wardrobe with our charming blue knit hat featuring a playful pom pom on top. Crafted from soft, cozy materials, this hat not only provides warmth but also adds a stylish touch to any outfit. Perfect for chilly days, it effortlessly combines comfort and fashion, making it an essential accessory for your cold-weather adventures. Don't miss out on this delightful piece that will keep you snug and trendy all season long!",
     "price": 9.99,
     "category": 2,
@@ -68,7 +68,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5006",
-    "name": "friendly name",
+    "name": "Kids Fedora",
     "description": "Elevate your style with this stunning purple fedora hat, a perfect blend of sophistication and flair. Crafted with high-quality materials, it offers both comfort and durability, making it an ideal accessory for any occasion. Whether you're dressing up for a night out or adding a pop of color to your everyday look, this eye-catching hat is sure to turn heads and make a statement. Don't miss the chance to express your unique personality with this fashionable piece!",
     "price": 9.99,
     "category": 2,
@@ -81,7 +81,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5007",
-    "name": "friendly name",
+    "name": "LED Bucket Hat",
     "description": "Illuminate your style with our innovative LED Light Hat, perfect for night outings, camping trips, or simply making a statement. This unique accessory combines fashion and functionality, featuring bright, adjustable LED lights that enhance visibility and add a fun twist to any outfit. Whether you're walking the dog after dark or attending a festival, this hat ensures you stand out while keeping your hands free. Don't miss out on the chance to light up your life—grab your LED Light Hat today!",
     "price": 25.00,
     "category": 3,
@@ -94,7 +94,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5008",
-    "name": "friendly name",
+    "name": "LED Fishing Hat",
     "description": "Illuminate your style with our vibrant hat featuring multicolored lights that will make you the center of attention at any event. Perfect for parties, festivals, or just a fun night out, this eye-catching accessory combines fashion with a playful twist. The adjustable fit ensures comfort, while the dazzling lights can be easily activated to match your mood or the occasion. Stand out from the crowd and express your unique personality with this must-have hat that lights up your life!",
     "price": 25.00,
     "category": 3,
@@ -107,7 +107,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5009",
-    "name": "friendly name",
+    "name": "LED Octopus Hat",
     "description": "Dive into a world of vibrant fun with our rainbow octopus-themed hat featuring dazzling LED lights! Perfect for parties, Halloween, or any festive occasion, this eye-catching outfit will make you the center of attention. The colorful design and glowing accents create a mesmerizing effect, ensuring you stand out in any crowd. Embrace your playful side and light up the night with this unique costume that combines creativity and excitement!",
     "price": 25.00,
     "category": 3,
@@ -120,7 +120,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5010",
-    "name": "friendly name",
+    "name": "LED Pink Cowboy Hat",
     "description": "Light up your style with our vibrant pink cowboy hat featuring dazzling LED lights! Perfect for parties, festivals, or a fun night out, this eye-catching accessory combines classic Western flair with a modern twist. Stand out from the crowd and make a statement while enjoying the playful glow that adds excitement to any outfit. Don’t miss your chance to shine—grab your pink LED cowboy hat today and be the life of the party!",
     "price": 25.00,
     "category": 3,
@@ -133,7 +133,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5011",
-    "name": "friendly name",
+    "name": "LED Sombrero",
     "description": "Brighten up your celebrations with our vibrant, light-up sombrero! This eye-catching accessory features a kaleidoscope of colors and twinkling lights that will make you the life of the party. Perfect for fiestas, themed events, or just adding a fun flair to your outfit, this sombrero combines traditional style with a modern twist. Stand out in any crowd and let the festivities shine with this unique and playful piece!",
     "price": 25.00,
     "category": 3,
@@ -146,7 +146,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5012",
-    "name": "friendly name",
+    "name": "LED Wizard Hat",
     "description": "Illuminate your style with our stunning black hat adorned with vibrant multicolored lights. Perfect for parties, festivals, or any occasion where you want to stand out, this hat combines fashion and fun effortlessly. The adjustable fit ensures comfort, while the eye-catching lights will make you the center of attention. Don’t miss out on this unique accessory that adds a playful twist to any outfit!",
     "price": 25.00,
     "category": 3,
@@ -159,7 +159,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5013",
-    "name": "friendly name",
+    "name": "Old School Hat",
     "description": "Elevate your style with this exquisite brown hat, featuring a sophisticated tan band adorning the brim. Perfect for any occasion, this hat combines timeless elegance with modern flair, making it an essential accessory for fashion-forward individuals. Whether you're enjoying a sunny day outdoors or adding a touch of class to your outfit, this hat is designed to turn heads and enhance your look effortlessly. Don't miss the chance to make a statement—add this stunning piece to your wardrobe today!",
     "price": 12.99,
     "category": 4,
@@ -172,7 +172,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5014",
-    "name": "friendly name",
+    "name": "Party Hat",
     "description": "Celebrate in style with our vibrant party hat adorned with colorful balloons! This eye-catching accessory is perfect for any festive occasion, adding a touch of fun and excitement to your celebrations. Made from high-quality materials, it ensures comfort while you party the night away. Stand out in the crowd and make every moment memorable with this delightful party hat that brings joy and cheer to every gathering!",
     "price": 12.99,
     "category": 4,
@@ -185,7 +185,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5015",
-    "name": "friendly name",
+    "name": "Santa Hat",
     "description": "Elevate your holiday spirit with this classic Santa hat, perfect for spreading cheer and joy! Crafted with soft, plush fabric, it features a traditional red design with a fluffy white pom-pom on top. Whether you're dressing up for a festive party, surprising loved ones, or simply getting into the Christmas mood, this Santa hat is a must-have accessory. Its comfortable fit ensures you can wear it all day long, making it an ideal choice for holiday gatherings, photos, or just lounging at home. Don't miss out on the chance to add a touch of whimsy to your celebrations!",
     "price": 12.99,
     "category": 4,
@@ -198,7 +198,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5016",
-    "name": "friendly name",
+    "name": "Straw Hat",
     "description": "Elevate your summer style with this charming straw hat, featuring a beautifully woven band that adds a touch of elegance. Perfect for beach days, garden parties, or casual outings, this hat not only provides essential sun protection but also enhances any outfit with its timeless design. Lightweight and breathable, it ensures comfort while keeping you chic and fashionable. Don't miss out on this must-have accessory for your warm-weather wardrobe!",
     "price": 12.99,
     "category": 4,
@@ -211,7 +211,7 @@
   "model": "products.product",
   "fields": {
     "sku": "pp5017",
-    "name": "friendly name",
+    "name": "Velvet Burgundy Cowboy Hat",
     "description": "Elevate your western style with this stunning brown cowboy hat, perfectly complemented by a vibrant, colorful scarf. Crafted from high-quality materials, this hat not only offers protection from the sun but also adds a touch of flair to any outfit. The scarf can be styled in various ways, allowing you to express your unique personality while embracing the spirit of the Wild West. Don't miss the chance to make a bold statement—this accessory is a must-have for any fashion-forward individual.",
     "price": 12.99,
     "category": 4,
