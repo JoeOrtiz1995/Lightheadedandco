@@ -1,13 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-<div class="container mt-5">
+{% block page_header %}
+<div class="container header-container">
   <div class="row">
-    <!-- Title -->
-    <h2>{{ about.title }}</h2>
-    <!-- Content -->
-    {{ about.content | safe }}
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-sm-6">
+      <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
+        alt="About Section Main Image showing LED hat" width="25vw">
+    </div>
+    <div class="col-sm-6">
+      <!-- Title -->
+      <h2 class="text-center text-fluid">{{ about.title }}</h2>
+      <!-- Content -->
+      {{ about.content | safe }}
+    </div>
   </div>
 </div>
 {% endblock content %}
