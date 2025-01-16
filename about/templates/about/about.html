@@ -11,16 +11,50 @@
 
 {% block content %}
 <div class="container mt-3">
-  <div class="row">
-    <div class="col-sm-6">
-      <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
-        alt="About Section Main Image showing LED hat" width="25vw">
+  <!-- ABOUT SECTION -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
+          alt="About Section Main Image showing LED hat" width="25vw">
+      </div>
+      <div class="col-lg-8 col-sm-6">
+        <!-- Title -->
+        <h2 class="text-center text-fluid">{{ about.title }}</h2>
+        <!-- Content -->
+        {{ about.content | safe }}
+      </div>
     </div>
-    <div class="col-sm-6">
-      <!-- Title -->
-      <h2 class="text-center text-fluid">{{ about.title }}</h2>
-      <!-- Content -->
-      {{ about.content | safe }}
+  </div>
+
+  <!-- TESTIMONIALS SECTION -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>TESTIMONIALS:</h3>
+        <div class="card-body">
+          {% for testimonial in testimonials %}
+          <div
+            class="testimonials{% if testimonial.approved == 0 and testimonial.author == user %} faded{% elif testimonial.approved == 0 %} d-none{% endif %}">
+            <p class="font-weight-bold">
+              {{ testimonial.author }}
+              <span class="font-weight-normal">
+                {{ testimonial.created_on }}
+              </span> wrote:
+            </p>
+            <div id="testimonial{{ testimonial.id }}">
+              {{ testimonial.body | linebreaks }}
+            </div>
+            {% if testimonial.approved == 0 and testimonial.author == user %}
+            <p class="approval">
+              This testimonial is awaiting approval
+            </p>
+            {% endif %}
+          </div>
+          <!-- Our for loop ends here -->
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </div>

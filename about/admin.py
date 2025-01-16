@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About
+from .models import About, Testimonial
 
 # Models registered:
 class AboutAdmin(admin.ModelAdmin):
@@ -11,3 +11,5 @@ class AboutAdmin(admin.ModelAdmin):
   ordering = ('pk',)
 
 admin.site.register(About, AboutAdmin)
+
+admin.site.register(Testimonial)
