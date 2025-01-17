@@ -10,16 +10,16 @@ def about_us(request):
 
   about = About.objects.all().last()
   testimonials = Testimonial.objects.all()
+
+  if request.method == "POST":
+    testimonial_form = TestimonialForm(data=request.POST)
+    if testimonial_form.is_valid():
+        testimonial = testimonial_form.save(commit=False)
+        testimonial.author = request.user
+        testimonial.save()
+
   testimonial_form = TestimonialForm()
   
-  # queryset = Testimonial.objects.filter(approved=1).order_by("created_on")
-  # testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
-
-  # context = {
-  #   'about': about,
-  #   'testimonial': testimonial,
-  # }
-
   return render(
     request,
     "about/about.html",
