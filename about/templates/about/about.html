@@ -36,7 +36,7 @@
     <div class="row">
       {% if user.is_authenticated %}
       <p>Please let us know how we did!</p>
-      <form id="TestimonialForm" method="post" style="margin-top: 1.3em;">
+      <form id="TestimonialForm" method="POST" style="margin-top: 1.3em;">
         {{ testimonial_form | crispy }}
         {% csrf_token %}
         <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
