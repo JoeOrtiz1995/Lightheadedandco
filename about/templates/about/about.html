@@ -37,8 +37,10 @@
       {% if user.is_authenticated %}
       <p>Please let us know how we did!</p>
       <form id="TestimonialForm" method="POST" style="margin-top: 1.3em;">
-        {{ testimonial_form | crispy }}
         {% csrf_token %}
+        <fieldset class="rounded px-3 mb-5">
+          {{ testimonial_form.body | as_crispy_field }}
+        </fieldset>
         <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
       </form>
       {% else %}
