@@ -31,7 +31,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['8000-joeortiz199-lightheaded-wn49fz64zxr.ws.codeinstitute-ide.net',]
 
-
 # Application definition
 
 INSTALLED_APPS = [
