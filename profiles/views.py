@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from .models import UserProfile
+from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
 from checkout.models import Order
+from products.models import Product
 
 # Create your views here.
 def profile(request):
@@ -42,3 +43,37 @@ def order_history(request, order_number):
   }
 
   return render(request, template, context)
+
+
+def view_wishlist(request):
+  """
+  A view to return a page with the User's bag contents.
+  """
+  wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+  template = 'profiles/wishlist.html'
+  context = {
+    'wishlist': wishlist,
+  }
+
+  return render(request, template, context)
+
+
+def add_to_wishlist(request, item_id):
+  """
+  Adds products to a user's wishlist
+  """
+  product = get_object_or_404(Product, pk=item_id)
+  wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+  wishlist.wishlist_items.add(product)
+  wishlist.save()
+  return redirect("view_wishlist")
+  
+def remove_from_wishlist(request, item_id):
+  """
+  Returns the user's wishlist without the removed item
+  """
+  product = get_object_or_404(Product, pk=item_id)
+  wishlist = Wishlist.objects.get(user=request.user)
+  wishlist.wishlist_items.remove(product)
+  wishlist.save()
+  return redirect("view_wishlist")

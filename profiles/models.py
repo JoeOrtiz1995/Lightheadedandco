@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django_countries.fields import CountryField
+from products.models import Product
 
 # Create your models here.
 class UserProfile(models.Model):
@@ -29,3 +30,23 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
   if created:
     UserProfile.objects.create(user=instance)
   instance.userprofile.save()
+
+
+class Wishlist(models.Model):
+  """
+  Stores a user's wishlist
+  """
+  user = models.OneToOneField(User, on_delete=models.CASCADE)
+  wishlist_items = models.ManyToManyField(Product, blank=True)
+  date_added = models.DateTimeField(auto_now_add=True)
+
+  def __str__(self):
+    return f"Wishlist for: {self.user.username}"
+
+@receiver(post_save, sender=User)
+def create_or_update_wishlist(sender, instance, created, **kwargs):
+  """
+  Creates a wishlist or updates an existing one
+  """
+  if created:
+    Wishlist.objects.create(user=instance)
