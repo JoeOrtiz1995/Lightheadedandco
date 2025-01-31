@@ -38,7 +38,7 @@ class Wishlist(models.Model):
   """
   user = models.OneToOneField(User, on_delete=models.CASCADE)
   wishlist_items = models.ManyToManyField(Product, blank=True)
-  date_added = models.DateTimeField(auto_now_add=True)
+
 
   def __str__(self):
     return f"Wishlist for: {self.user.username}"

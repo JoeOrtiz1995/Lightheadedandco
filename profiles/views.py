@@ -71,9 +71,11 @@ def add_to_wishlist(request, item_id):
   """
   product = get_object_or_404(Product, pk=item_id)
   wishlist, created = Wishlist.objects.get_or_create(user=request.user)
-  wishlist.wishlist_items.add(product)
+  if not wishlist.wishlist_items.filter(id=product.id).exists():
+    wishlist.wishlist_items.add(product)
+    messages.success(request, 'Product added successfully')
+    
   wishlist.save()
-  messages.success(request, 'Product added successfully')
   return redirect(reverse('product_detail', args=[product.id]))
   
 

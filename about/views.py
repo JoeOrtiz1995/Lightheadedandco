@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import About, Testimonial
 from .forms import TestimonialForm
 
@@ -17,15 +19,42 @@ def about_us(request):
         testimonial = testimonial_form.save(commit=False)
         testimonial.author = request.user
         testimonial.save()
+        messages.success(request, 'Testimonial submitted for review')
 
   testimonial_form = TestimonialForm()
   
-  return render(
-    request,
-    "about/about.html",
+  return render(request, "about/about.html",
     {
       'about': about,
       'testimonial_form': testimonial_form,
       'testimonials': testimonials,
     },
   )
+
+@login_required
+def edit_testimonial(request, testimonial_id):
+  """
+  Allows users to edit existing testimonials they've submitted
+  """
+  if request.method == 'POST':
+      testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
+      testimonial_form = TestimonialForm(request.POST, instance=testimonial)
+      if testimonial_form.is_valid() and testimonial.author == request.user:
+        testimonial = testimonial_form.save(commit=False)
+        testimonial.save()
+        messages.success(request, 'Successfully updated Testimonial!')
+      else:
+        messages.error(request, 'Failed to update Testimonial. Please ensure the form is valid.')
+
+  return redirect(reverse('about'))
+
+
+@login_required
+def delete_testimonial(request, testimonial_id):
+  """
+  Allows users to delete existing testimonials they've submitted
+  """
+  testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
+  testimonial.delete()
+  messages.success(request, 'Testimonial deleted!')
+  return redirect(reverse('about'))
