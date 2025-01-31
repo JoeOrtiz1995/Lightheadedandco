@@ -1,1 +1,1 @@
-web: gunicorn lightheadedandco.wsgi
+web: gunicorn lightheadedandco.wsgi:application
