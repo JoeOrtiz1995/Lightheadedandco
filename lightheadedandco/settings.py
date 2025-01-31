@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import dj_database_url
 if os.path.exists("env.py"):
     import env
 
@@ -27,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-s90lb__uyma(%z!a9v%2)nqew2x4qq*c575iuo0xg$+^y67zds'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-joeortiz199-lightheaded-wn49fz64zxr.ws.codeinstitute-ide.net', '127.0.0.1',]
+ALLOWED_HOSTS = ['8000-joeortiz199-lightheaded-wn49fz64zxr.ws.codeinstitute-ide.net', '127.0.0.1', '.herokuapp.com']
 
 # Application definition
 
@@ -122,13 +123,17 @@ WSGI_APPLICATION = 'lightheadedandco.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
     }
-}
-
+else:    
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
