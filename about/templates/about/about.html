@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mt-3">
+<div class="container mt-4">
   <!-- ABOUT SECTION -->
   <div class="container">
     <div class="row">
@@ -28,51 +28,60 @@
     </div>
   </div>
 
+  <hr>
+
   <!-- TESTIMONIALS SECTION -->
   <div class="container">
-    <div class="row text-center">
+    <div class="card mb-4 row justify-content-center">
       <h3>TESTIMONIALS:</h3>
     </div>
     <div class="row">
       {% if user.is_authenticated %}
       <p>Please let us know how we did!</p>
+    </div>
+    <div class="row">
       <form id="TestimonialForm" method="POST" style="margin-top: 1.3em;">
         {% csrf_token %}
-        <fieldset class="rounded px-3 mb-5">
+        <fieldset class="rounded px-3 mb-2">
           {{ testimonial_form.body | as_crispy_field }}
         </fieldset>
-        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+        <button id="submitButton" type="submit" class="btn btn-signup btn-outline-black">Submit</button>
       </form>
       {% else %}
       <p>Please log in if you'd like to leave a Testimonial!</p>
       {% endif %}
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="card-body">
-          {% for testimonial in testimonials %}
-          <div
-            class="testimonials{% if testimonial.approved == 0 and testimonial.author == user %} faded{% elif testimonial.approved == 0 %} d-none{% endif %}">
-            <p class="font-weight-bold">
-              {{ testimonial.author }}
-              <span class="font-weight-normal">
-                {{ testimonial.created_on }}
-              </span> wrote:
-            </p>
-            <div id="testimonial{{ testimonial.id }}">
-              {{ testimonial.body | linebreaks }}
+        <div class="col-md-4 mb-4 mt-3">
+          <div class="card-body">
+            {% for testimonial in testimonials %}
+            <div
+              class="testimonials{% if testimonial.approved == 0 and testimonial.author == user %} faded{% elif testimonial.approved == 0 %} d-none{% endif %}">
+              <p class="font-weight-bold">
+                {{ testimonial.author }}
+                <span class="font-weight-normal">
+                  {{ testimonial.created_on }}
+                </span> wrote:
+              </p>
+              <div id="testimonial{{ testimonial.id }}">
+                {{ testimonial.body | linebreaks }}
+              </div>
+              {% if testimonial.approved == 0 and testimonial.author == user %}
+              <p class="approval">
+                This testimonial is awaiting approval
+              </p>
+              {% endif %}
+              {% if user.is_authenticated and testimonial.author == user %}
+              <button class="btn btn-edit" data-comment_id="{{ testimonial.id }}">Edit</button>
+              <button class="btn btn-delete" data-comment_id="{{ testimonial.id }}">Delete</button>
+              {% endif %}
+              <hr>
             </div>
-            {% if testimonial.approved == 0 and testimonial.author == user %}
-            <p class="approval">
-              This testimonial is awaiting approval
-            </p>
-            {% endif %}
+            <!-- Our for loop ends here -->
+            {% endfor %}
           </div>
-          <!-- Our for loop ends here -->
-          {% endfor %}
         </div>
       </div>
     </div>
+    
   </div>
 </div>
 {% endblock content %}

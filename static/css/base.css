@@ -14,6 +14,19 @@ body {
   align-content: center;
 }
 
+.card {
+  border: 1px solid #000;
+  flex-direction: row;
+}
+
+.faded {
+  color: rgb(172, 175, 175);
+}
+
+.approval {
+  color: rgb(222, 146, 168);
+}
+
 /* from Bulma */
 .icon {
   align-items: center;
@@ -36,10 +49,6 @@ body {
   display: flex;
 }
 
-#searchbar {
-  align-self: center;
-}
-
 .shop-now-button {
   background: black;
   color: white;
@@ -49,6 +58,16 @@ body {
 .btn-black {
   background: black;
   color: white;
+}
+
+.btn-delete {
+  color: #fff;
+  background: #bd2f00;
+}
+
+.btn-edit {
+  background-color: #529c0d;
+  color: #fff;
 }
 
 .btn-outline-black {
