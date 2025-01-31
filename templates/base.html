@@ -57,16 +57,16 @@
 
 <body>
   <header class="container-fluid bg-white fixed-top">
-    <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left text-uppercase">
-        <a href="{% url 'home' %}" class="nav-link main-logo-link">
-          <h2 class="logo-font text-black my-0"><strong>Lightheadedandco</strong></h2>
+    <div id="topnav" class="row pt-lg-2 d-none d-flex">
+      <div class="col-12 col-lg-4 my-auto py-1 text-left text-uppercase nav-link">
+        <a href="{% url 'home' %}" class="main-logo-link">
+          <h2 class="logo-font text-black my-0 navbar-text"><strong>Lightheadedandco</strong></h2>
           <img src="/media/logo.jpg" class="icon-nav" alt="Lightheadedandco logo">
         </a>
       </div>
 
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <form method="GET" action="{% url 'products' %}">
+      <div id="searchbar" class="col-6 col-lg-4 my-auto py-lg-0">
+        <form class="form-inline" method="GET" action="{% url 'products' %}">
           <div class="input-group w-100">
             <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
             <div class="input-group-append">

@@ -3,11 +3,15 @@ html {
 }
 
 body {
-  background: url('/media/homepage_background_cropped.jpg') center center fixed;
+  background: url("/media/homepage_background_cropped.jpg") center center fixed;
   background-size: contain;
   height: calc(100vh - 164px);
   color: #555;
-  font-family: 'Lato';
+  font-family: "Lato";
+}
+
+#topnav {
+  align-content: center;
 }
 
 /* from Bulma */
@@ -30,6 +34,10 @@ body {
 .main-logo-link {
   width: fit-content;
   display: flex;
+}
+
+#searchbar {
+  align-self: center;
 }
 
 .shop-now-button {
@@ -56,7 +64,6 @@ body {
   color: white !important;
 }
 
-
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -81,12 +88,12 @@ body {
 
 .overlay {
   height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: white;
+  z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
@@ -108,7 +115,7 @@ a.category-badge > span.badge:hover {
   cursor: pointer;
 }
 
-input[name='q']::placeholder {
+input[name="q"]::placeholder {
   color: #aab7c4;
 }
 
@@ -131,10 +138,10 @@ input[name='q']::placeholder {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 4px solid transparent;
-  border-right: 4px solid transparent; 
+  border-right: 4px solid transparent;
   border-bottom: 10px solid black;
   position: absolute;
   top: -10px;
@@ -184,8 +191,8 @@ input[name='q']::placeholder {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-.container {
-  max-width: 80%;
+  .container {
+    max-width: 80%;
   }
 }
 
@@ -200,7 +207,7 @@ input[name='q']::placeholder {
   border-radius: 0;
 }
 
-.allauth-form-inner-content label:not([for='id_remember']) {
+.allauth-form-inner-content label:not([for="id_remember"]) {
   display: none;
 }
 
@@ -209,8 +216,8 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-/* btn */
+.allauth-form-inner-content input[type="submit"] {
+  /* btn */
   display: inline-block;
   font-weight: 400;
   color: #fff;
@@ -222,17 +229,18 @@ input[name='q']::placeholder {
   user-select: none;
   background-color: #000;
   border: 1px solid #000;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0;
 
   /* standard bootstrap btn transitions */
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
+.allauth-form-inner-content input[type="submit"]:hover {
   color: #fff;
   background-color: #222;
   border-color: #222;
@@ -245,26 +253,27 @@ input[name='q']::placeholder {
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
   .fixed-top-desktop-only {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1030;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
   }
 
   .header-container {
-      padding-top: 125px;
-      padding-bottom: 30px;
+    padding-top: 125px;
+    align-items: center;
+    padding-bottom: 30px;
   }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
   .header-container {
-      padding-top: 164px;
+    padding-top: 164px;
   }
 
   body {
-      height: calc(100vh + 116px);
+    height: calc(100vh + 116px);
   }
 }
