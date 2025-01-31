@@ -1,11 +1,13 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
 from checkout.models import Order
 from products.models import Product
 
 # Create your views here.
+@login_required
 def profile(request):
   """
   Dispalys a User's profile
@@ -18,7 +20,7 @@ def profile(request):
       form.save()
       messages.success(request, ('Your profile has been updated'))
     else:
-      messages.error(request, 'Error encountered while updating profile')
+      messages.error(request, ('Error encountered while updating profile'))
   else:
     form = UserProfileForm(instance=profile)
   orders = profile.orders.all()
@@ -33,6 +35,7 @@ def profile(request):
   return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
   order = get_object_or_404(Order, order_number=order_number)
 
@@ -47,6 +50,7 @@ def order_history(request, order_number):
   return render(request, template, context)
 
 
+@login_required
 def view_wishlist(request):
   """
   A view to return a page with the User's bag contents.
@@ -60,6 +64,7 @@ def view_wishlist(request):
   return render(request, template, context)
 
 
+@login_required
 def add_to_wishlist(request, item_id):
   """
   Adds products to a user's wishlist
@@ -68,8 +73,11 @@ def add_to_wishlist(request, item_id):
   wishlist, created = Wishlist.objects.get_or_create(user=request.user)
   wishlist.wishlist_items.add(product)
   wishlist.save()
-  return redirect("view_wishlist")
+  messages.success(request, 'Product added successfully')
+  return redirect(reverse('product_detail', args=[product.id]))
   
+
+@login_required
 def remove_from_wishlist(request, item_id):
   """
   Returns the user's wishlist without the removed item
@@ -78,4 +86,5 @@ def remove_from_wishlist(request, item_id):
   wishlist = Wishlist.objects.get(user=request.user)
   wishlist.wishlist_items.remove(product)
   wishlist.save()
+  messages.success(request, 'Product removed successfully')
   return redirect("view_wishlist")

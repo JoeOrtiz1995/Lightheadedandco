@@ -33,7 +33,7 @@
               <th></th>
               <th>Item</th>
               <th>Price</th>
-              <th>Date Added</th>
+              <th>Rating</th>
             </tr>
           </thead>
           <tbody>
@@ -50,10 +50,13 @@
                 <p class="my-0">${{ product.price }}</p>
               </td>
               <td class="py-3">
-                <p class="my-0">{{ wishlist.date_added }}</p>
+                <p class="my-0">{{ product.rating }}</p>
               </td>
               <td class="py-3">
                 <a class="btn" href="{% url 'remove_from_wishlist' product.id %}">Remove</a>
+              </td>
+              <td class="py-3">
+                <a class="btn" href="{% url 'product_detail' product.id %}">View item</a>
               </td>
             </tr>
             {% endfor %}
