@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from .models import About, Testimonial
 from .forms import TestimonialForm
 
@@ -36,17 +37,33 @@ def edit_testimonial(request, testimonial_id):
   """
   Allows users to edit existing testimonials they've submitted
   """
-  if request.method == 'POST':
-      testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
-      testimonial_form = TestimonialForm(request.POST, instance=testimonial)
-      if testimonial_form.is_valid() and testimonial.author == request.user:
-        testimonial = testimonial_form.save(commit=False)
-        testimonial.save()
-        messages.success(request, 'Successfully updated Testimonial!')
-      else:
-        messages.error(request, 'Failed to update Testimonial. Please ensure the form is valid.')
+  testimonial = get_object_or_404(Testimonial, pk=testimonial_id, author=request.user)
 
-  return redirect(reverse('about'))
+  if request.method == "POST":
+    testimonial_form = TestimonialForm(request.POST, instance=testimonial)
+    if testimonial_form.is_valid():
+      testimonial = testimonial_form.save(commit=False)
+      testimonial.approved = 0
+      testimonial.save()
+      messages.success(request, "Successfully updated Testimonial!")
+      return HttpResponseRedirect(reverse("about"))
+    else:
+      messages.error(request, "Failed to update Testimonial. Please ensure the form is valid.")
+
+  return render(request, "about/about.html", {"testimonial_form": TestimonialForm(instance=testimonial)})
+
+  
+  # if request.method == 'POST':
+  #     testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
+  #     testimonial_form = TestimonialForm(request.POST, instance=testimonial)
+  #     if testimonial_form.is_valid() and testimonial.author == request.user:
+  #       testimonial = testimonial_form.save(commit=False)
+  #       testimonial.save()
+  #       messages.success(request, 'Successfully updated Testimonial!')
+  #     else:
+  #       messages.error(request, 'Failed to update Testimonial. Please ensure the form is valid.')
+
+  # return redirect(reverse('about'))
 
 
 @login_required

@@ -51,44 +51,49 @@
       {% else %}
       <p>Please log in if you'd like to leave a Testimonial!</p>
       {% endif %}
-        <div class="col-md-4 mb-4 mt-3">
-          <div class="card-body">
-            {% for testimonial in testimonials %}
-            <div
-              class="testimonials{% if testimonial.approved == 0 and testimonial.author == user %} faded{% elif testimonial.approved == 0 %} d-none{% endif %}">
-              <p class="font-weight-bold">
-                {{ testimonial.author }}
-                <span class="font-weight-normal">
-                  {{ testimonial.created_on }}
-                </span> wrote:
-              </p>
-              <div id="testimonial{{ testimonial.id }}">
-                {{ testimonial.body | linebreaks }}
-              </div>
-              {% if testimonial.approved == 0 and testimonial.author == user %}
-              <p class="approval">
-                This testimonial is awaiting approval
-              </p>
-              {% endif %}
-              {% if user.is_authenticated and testimonial.author == user %}
-              <a class="btn-edit rounded mt-5 p-2 text-uppercase"
-                  href="{% url 'edit_testimonial' testimonial.id %}">
-                  Edit
-                </a>
-                <a class="btn-delete rounded mt-5 p-2 text-uppercase"
-                  href="{% url 'delete_testimonial' testimonial.id %}">
-                 Delete
-                </a>
-              {% endif %}
-              <hr>
+      <div class="col-md-4 mb-4 mt-3">
+        <div class="card-body">
+          {% for testimonial in testimonials %}
+          <div
+            class="testimonials{% if testimonial.approved == 0 and testimonial.author == user %} faded{% elif testimonial.approved == 0 %} d-none{% endif %}">
+            <p class="font-weight-bold">
+              {{ testimonial.author }}
+              <span class="font-weight-normal">
+                {{ testimonial.created_on }}
+              </span> wrote:
+            </p>
+            <div id="testimonial{{ testimonial.id }}">
+              {{ testimonial.body | linebreaks }}
             </div>
-            <!-- Our for loop ends here -->
-            {% endfor %}
+            {% if testimonial.approved == 0 and testimonial.author == user %}
+            <p class="approval">
+              This testimonial is awaiting approval
+            </p>
+            {% endif %}
+            {% if user.is_authenticated and testimonial.author == request.user %}
+            <!-- <button class="btn-edit" data-testimonial-id="{{ testimonial.id }}">Edit</button> -->
+            <a class="btn-edit rounded mt-5 p-2 text-uppercase" data-testimonial_id="{{ testimonial.id }}"
+              href="{% url 'edit_testimonial' testimonial.id %}">
+              Edit
+            </a>
+            <a class="btn-delete rounded mt-5 p-2 text-uppercase" href="{% url 'delete_testimonial' testimonial.id %}">
+              Delete
+            </a>
+            {% endif %}
+            <hr>
           </div>
+          <!-- Our for loop ends here -->
+          {% endfor %}
         </div>
       </div>
     </div>
-    
   </div>
+
+</div>
 </div>
 {% endblock content %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script src="{% static 'about/js/testimonials.js' %}"></script>
+{% endblock %}
