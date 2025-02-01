@@ -115,6 +115,16 @@ body {
   z-index: -1;
 }
 
+.navbar-nav {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar {
+  flex-wrap: wrap;
+}
+
 a.category-badge > span.badge:hover {
   background: #212529 !important;
   color: #fff !important;
@@ -284,6 +294,17 @@ input[name="q"]::placeholder {
     align-items: center;
     padding-bottom: 30px;
   }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+  
+  .form-inline {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+  }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -294,5 +315,29 @@ input[name="q"]::placeholder {
 
   body {
     height: calc(100vh + 116px);
+  }
+
+  .form-inline {
+    width: 100%;
+  }
+
+  .form-inline input {
+    max-width: 80%;
+  }
+
+  .collapse {
+    display: none;
+  }
+
+.collapse.show {
+    display: block;
+    position: absolute;
+    top: 60px; /* Adjust dropdown position */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    padding: 10px 0;
+    text-align: center;
   }
 }
