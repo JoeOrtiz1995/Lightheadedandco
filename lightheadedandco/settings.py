@@ -34,7 +34,6 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = ['8000-joeortiz199-lightheaded-v44kgywdt7o.ws.codeinstitute-ide.net', '127.0.0.1', '.herokuapp.com',]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
