@@ -31,9 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = [
-    '8000-joeortiz199-lightheaded-v44kgywdt7o.ws.codeinstitute-ide.net',
-    '127.0.0.1', '.herokuapp.com',]
+ALLOWED_HOSTS = ['8000-joeortiz199-lightheaded-v44kgywdt7o.ws.codeinstitute-ide.net', '127.0.0.1', '.herokuapp.com',]
 
 # Application definition
 INSTALLED_APPS = [
