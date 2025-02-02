@@ -27,8 +27,8 @@
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="product-details-container mb-5 mt-md-5">
-        <p class="mb-0">{{ product.name }}</p>
+      <div class="product-details-container mb-5 mt-2>
+        <p class=" mb-0">{{ product.name }}</p>
         <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
         {% if product.category %}
         <p class="small mt-1 mb-0">
@@ -67,7 +67,7 @@
                   <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99"
                     data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                   <div class="input-group-append">
-                    <button class="increment-qty btn btn-black rounded-0" data-item_id="{{ product.id }}"
+                    <button class="increment-qty btn btn-black rounded" data-item_id="{{ product.id }}"
                       id="increment-qty_{{ product.id }}">
                       <span class="icon">
                         <i class="fas fa-plus"></i>
@@ -78,26 +78,31 @@
               </div>
 
               <div class="col-12">
-                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded mt-2">
                   <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                   </span>
                   <span class="text-uppercase">Keep Shopping</span>
                 </a>
-                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                <input type="submit" class="btn btn-black rounded text-uppercase mt-2" value="Add to Bag">
                 {% if user.is_authenticated %}
                 {% with user.wishlist as wishlist %}
                 {% if wishlist and product in wishlist.wishlist_items.all %}
-                <a class="btn btn-outline-secondary disabled btn-sm rounded mt-5 text-uppercase">
+                <a class="btn btn-outline-black disabled rounded mt-2 text-uppercase">
                   In your wishlist
                 </a>
                 {% else %}
-                <a class="btn btn-outline-secondary btn-sm rounded mt-5 text-uppercase"
-                  href="{% url 'add_to_wishlist' product.id %}">
+                <a class="btn btn-edit rounded text-uppercase mt-2" href="{% url 'add_to_wishlist' product.id %}">
                   Add To Wishlist
                 </a>
                 {% endif %}
                 {% endwith %}
+                {% else %}
+                <div class="row mt-2">
+                  <p>You can <a href="{% url 'account_signup' %}">sign up</a> for an account or <a
+                      href="{% url 'account_login' %}">log
+                      in</a> to your existing one to add products to your wishlist.</p>
+                </div>
                 {% endif %}
               </div>
               <input type="hidden" name="redirect_url" value="{{ request.path }}">
