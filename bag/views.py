@@ -26,7 +26,7 @@ def add_to_bag(request, item_id):
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
         messages.success(request,
-            f'{bag[item_id]} x {product.name} in your bag')
+                         f'{bag[item_id]} x {product.name} in your bag')
     else:
         bag[item_id] = quantity
         messages.success(request, f'{product.name} is now in your bag')
@@ -46,8 +46,8 @@ def adjust_bag(request, item_id):
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'{bag[item_id]} x {
-                         product.name} in your bag')
+        messages.success(request,
+                         f'{bag[item_id]} x {product.name} in your bag')
     else:
         bag.pop(item_id)
         messages.success(
