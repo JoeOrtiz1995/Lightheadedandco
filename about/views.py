@@ -52,19 +52,6 @@ def edit_testimonial(request, testimonial_id):
 
   return render(request, "about/about.html", {"testimonial_form": TestimonialForm(instance=testimonial)})
 
-  
-  # if request.method == 'POST':
-  #     testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
-  #     testimonial_form = TestimonialForm(request.POST, instance=testimonial)
-  #     if testimonial_form.is_valid() and testimonial.author == request.user:
-  #       testimonial = testimonial_form.save(commit=False)
-  #       testimonial.save()
-  #       messages.success(request, 'Successfully updated Testimonial!')
-  #     else:
-  #       messages.error(request, 'Failed to update Testimonial. Please ensure the form is valid.')
-
-  # return redirect(reverse('about'))
-
 
 @login_required
 def delete_testimonial(request, testimonial_id):
