@@ -1,16 +1,19 @@
 html {
   height: 100%;
-  overflow: auto !important;
 }
 
 body {
-  background: url("/media/homepage_background_cropped.jpg") center center;
+  background: url("/media/homepage_background_cropped.jpg") center center fixed;
   background-size: contain;
   height: calc(100vh - 164px);
   min-height: 100vh;
   height: auto;
   color: #555;
   font-family: "Lato";
+}
+
+img {
+  max-width: 150px;
 }
 
 /* from Bulma */
@@ -87,19 +90,9 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   background: white;
   z-index: -1;
-}
-
-.navbar-nav {
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.navbar {
-  flex-wrap: wrap;
 }
 
 a.category-badge>span.badge:hover {
@@ -110,7 +103,7 @@ a.category-badge>span.badge:hover {
 .btt-button {
   height: 42px;
   width: 42px;
-  /* position: fixed; */
+  position: fixed;
   bottom: 10px;
   right: 10px;
 }
@@ -125,10 +118,17 @@ input[name='q']::placeholder {
   color: #aab7c4;
 }
 
+.home-logo {
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: xxx-large;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
-  /* position: fixed; */
+  position: fixed;
   top: 72px;
   right: 15px;
   z-index: 99999999999;
@@ -189,8 +189,8 @@ input[name='q']::placeholder {
 
 .bag-notification-wrapper {
   height: 100px;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* -------------------------------- Media Queries */
@@ -263,7 +263,7 @@ input[name='q']::placeholder {
 
 .btn-file {
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .btn-file input[type="file"] {
@@ -287,11 +287,42 @@ input[name='q']::placeholder {
   border-radius: 0;
 }
 
+.testimonial-row,
+.wishlist-row {
+  max-width: fit-content;
+  justify-self: center;
+}
+
+.btn-edit {
+  background-color: #529c0d;
+  color: #fff;
+  padding: 5px;
+  border: solid 1px;
+}
+
+.btn-delete {
+  color: #fff;
+  background: #bd2f00;
+  padding: 5px;
+  border: solid 1px;
+}
+
+.btn-edit:hover,
+.btn-edit:active {
+  color: #529c0d;
+  background-color: #fff;
+}
+
+.btn-delete:hover,
+.btn-delete:active {
+  background: #fff;
+  color: #bd2f00;
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
   .fixed-top-desktop-only {
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -306,15 +337,11 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
   .header-container {
-    padding-top: 116px;
+    padding-top: 4rem;
   }
 
   body {
-    height: calc(100vh + 116px);
-  }
-
-  .display-4.logo-font.text-black {
-    font-size: 2rem;
+    height: calc(100vh - 116px);
   }
 
   .nav-link {
@@ -330,13 +357,13 @@ input[name='q']::placeholder {
     font-size: 1rem;
   }
 
-  .btn.btn-outline-black.rounded-0,
-  .btn.btn-black.rounded-0 {
+  .btn.btn-outline-black.rounded,
+  .btn.btn-black.rounded {
     padding: .375rem .375rem;
   }
 
-  .btn.btn-outline-black.rounded-0.btn-lg,
-  .btn.btn-black.rounded-0.btn-lg {
+  .btn.btn-outline-black.rounded.btn-lg,
+  .btn.btn-black.rounded.btn-lg {
     padding: .375rem .375rem;
     font-size: .75rem;
   }
@@ -346,5 +373,12 @@ input[name='q']::placeholder {
     padding: .25rem .5rem !important;
   }
 
+  .home-logo {
+    font-size: xx-large;
+  }
 
+  .home-container {
+    padding-top: 6.5rem;
+    padding-left: 3rem;
+  }
 }
