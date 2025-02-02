@@ -31,7 +31,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-joeortiz199-lightheaded-v44kgywdt7o.ws.codeinstitute-ide.net', '127.0.0.1', '.herokuapp.com',]
+ALLOWED_HOSTS = [
+    '8000-joeortiz199-lightheaded-v44kgywdt7o.ws.codeinstitute-ide.net',
+    '127.0.0.1', '.herokuapp.com',]
 
 # Application definition
 INSTALLED_APPS = [
@@ -52,7 +54,7 @@ INSTALLED_APPS = [
     'products',
     'profiles',
 
-    #Other
+    # Other
     'crispy_forms',
     'storages',
 ]
@@ -82,7 +84,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # Used by allauth
+                'django.template.context_processors.request',  # Allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -126,7 +128,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
     }
-else:    
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -139,16 +141,20 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -189,7 +195,8 @@ if 'USE_AWS' in os.environ:
     AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.eu-north-1.amazonaws.com'
+    AWS_S3_CUSTOM_DOMAIN = f'{
+        AWS_STORAGE_BUCKET_NAME}.s3.eu-north-1.amazonaws.com'
 
     # Static & Media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
