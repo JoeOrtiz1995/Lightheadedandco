@@ -57,7 +57,7 @@
                 <a class="btn-edit" href="{% url 'product_detail' product.id %}">View item</a>
               </td>
               <td class="py-3">
-                <a class="btn-delete href=" {% url 'remove_from_wishlist' product.id %}">Remove</a>
+                <a class="btn-delete" href="{% url 'remove_from_wishlist' product.id %}">Remove</a>
               </td>
             </tr>
             {% endfor %}
