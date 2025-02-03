@@ -51,7 +51,7 @@
                 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
               </td>
               <td class="align-middle">
-                <p class="my-0">${{ item.product.price }}</p>
+                <p class="my-0">£{{ item.product.price }}</p>
               </td>
               <td class="align-middle w-25 text-center">
                 <form action="{% url 'adjust_bag' item.item_id %}" class="form update-form" method="POST">
@@ -64,7 +64,7 @@
               </td>
 
               <td class="align-middle">
-                <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
               </td>
             </tr>
             {% endfor %}
@@ -73,7 +73,7 @@
       </div>
       <div class="row text-right">
         <div class="col">
-          <h4 class="mt-2"><strong>Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+          <h4 class="mt-2"><strong>Total: £{{ grand_total|floatformat:2 }}</strong></h4>
 
           <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-sm mb-2">
             <span class="icon">
