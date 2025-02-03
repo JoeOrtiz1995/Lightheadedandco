@@ -321,6 +321,11 @@ input[name='q']::placeholder {
   color: #bd2f00;
 }
 
+#mc_embed_signup {
+  background: #fff;
+  max-width: 75%;
+}
+
 footer {
   position: fixed;
   bottom: 0;
