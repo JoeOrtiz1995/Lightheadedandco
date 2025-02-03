@@ -390,8 +390,8 @@ footer {
   }
 
   .home-container {
-    padding-top: 11rem;
-    padding-left: 5rem;
+    max-width: 75vw;
+    padding-top: 9rem;
   }
 
 
