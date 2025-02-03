@@ -12,16 +12,6 @@ body {
   font-family: "Lato";
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  margin-top: auto;
-  background-color: black;
-  min-height: 2em;
-  margin-top: 5px;
-}
-
 img {
   max-width: 150px;
 }
@@ -328,6 +318,17 @@ input[name='q']::placeholder {
 .btn-delete:active {
   background: #fff;
   color: #bd2f00;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  margin-top: auto;
+  background-color: black;
+  min-height: 2em;
+  margin-top: 5px;
+  z-index: 500;
 }
 
 /* fixed top navbar only on medium and up */
