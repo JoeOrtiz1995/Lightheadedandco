@@ -12,6 +12,16 @@ body {
   font-family: "Lato";
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  margin-top: auto;
+  background-color: black;
+  min-height: 2em;
+  margin-top: 5px;
+}
+
 img {
   max-width: 150px;
 }
@@ -320,16 +330,6 @@ input[name='q']::placeholder {
   color: #bd2f00;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  margin-top: auto;
-  background-color: black;
-  min-height: 2em;
-  margin-top: 5px;
-}
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
   .fixed-top-desktop-only {
@@ -389,8 +389,8 @@ input[name='q']::placeholder {
   }
 
   .home-container {
-    padding-top: 6.5rem;
-    padding-left: 3rem;
+    padding-top: 11rem;
+    padding-left: 5rem;
   }
 
 
