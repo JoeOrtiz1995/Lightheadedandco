@@ -31,7 +31,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-joeortiz199-lightheaded-v44kgywdt7o.ws.codeinstitute-ide.net', '127.0.0.1', '.herokuapp.com',]
+ALLOWED_HOSTS = ['8000-joeortiz199-lightheaded-v44kgywdt7o.ws.codeinstitute-ide.net',
+                 '127.0.0.1', '.herokuapp.com',]
 
 # Application definition
 INSTALLED_APPS = [
@@ -193,7 +194,8 @@ if 'USE_AWS' in os.environ:
     AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.eu-north-1.amazonaws.com'
+    AWS_S3_CUSTOM_DOMAIN = f'{
+        AWS_STORAGE_BUCKET_NAME}.s3.eu-north-1.amazonaws.com'
 
     # Static & Media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'

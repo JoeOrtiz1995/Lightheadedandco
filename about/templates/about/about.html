@@ -72,7 +72,7 @@
             </p>
             {% endif %}
             {% if user.is_authenticated and testimonial.author == request.user %}
-            <!-- <button class="btn-edit" data-testimonial-id="{{ testimonial.id }}">Edit</button> -->
+
             <a class="btn-edit rounded mt-5 p-2 text-uppercase" data-testimonial_id="{{ testimonial.id }}"
               href="{% url 'edit_testimonial' testimonial.id %}">
               Edit
@@ -83,14 +83,12 @@
             {% endif %}
             <hr>
           </div>
-          <!-- Our for loop ends here -->
+
           {% endfor %}
         </div>
       </div>
     </div>
   </div>
-
-</div>
 </div>
 {% endblock content %}
 

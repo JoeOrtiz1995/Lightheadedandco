@@ -12,6 +12,16 @@ body {
   font-family: "Lato";
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  margin-top: auto;
+  background-color: black;
+  min-height: 2em;
+  margin-top: 5px;
+}
+
 img {
   max-width: 150px;
 }
@@ -381,4 +391,6 @@ input[name='q']::placeholder {
     padding-top: 6.5rem;
     padding-left: 3rem;
   }
+
+
 }
