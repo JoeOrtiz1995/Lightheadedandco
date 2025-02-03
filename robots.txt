@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /admin/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /media/
+Disallow: /profile/
+Disallow: /search/
+Disallow: /static/
+Sitemap: https://lightheadedandco-9599235ba406.herokuapp.com/sitemap.xml
