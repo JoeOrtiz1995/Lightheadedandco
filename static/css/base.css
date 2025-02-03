@@ -5,8 +5,9 @@ html {
 body {
   background: url("/media/homepage_background_cropped.jpg") center center fixed;
   background-size: contain;
-  height: calc(100vh - 164px);
+  height: calc(100vh - 125px);
   min-height: 100vh;
+  margin-bottom: 2.5em;
   height: auto;
   color: #555;
   font-family: "Lato";
@@ -323,11 +324,10 @@ input[name='q']::placeholder {
 footer {
   position: fixed;
   bottom: 0;
-  width: 100vw;
-  margin-top: auto;
+  width: 100%;
+  margin-top: 3em;
   background-color: black;
-  min-height: 2em;
-  margin-top: 5px;
+  min-height: 1.5em;
   z-index: 500;
 }
 

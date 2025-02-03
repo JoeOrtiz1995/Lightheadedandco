@@ -40,7 +40,8 @@
             <tr>
               <td class="align-middle">
                 {% if item.product.image %}
-                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"
+                  width="150px">
                 {% else %}
                 <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                 {% endif %}
@@ -72,7 +73,7 @@
       </div>
       <div class="row text-right">
         <div class="col">
-          <h4 class="mt-4"><strong>Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+          <h4 class="mt-2"><strong>Total: ${{ grand_total|floatformat:2 }}</strong></h4>
 
           <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-sm mb-2">
             <span class="icon">
