@@ -1,12 +1,13 @@
 # **LIGHTHEADEDANDCO ECOMMERCE PLATFORM**
-Amiresponsiveimagelink here
+
+![Amiresponsiveimage](readme/assets/images/amiresponsive_screenshot.png)
 
 # INTRODUCTION
 The Lightheadedandco site has been created as an online hat store where users can view and purchase a variety of hats.
 
 To view the site please follow the link below:
 
-[Lightheadedandco Site]()
+[Lightheadedandco Site](https://lightheadedandco-9599235ba406.herokuapp.com/)
 
 
 # CONTENTS
@@ -30,20 +31,24 @@ To view the site please follow the link below:
 
 - [FEATURES](#features)
   - [Main Features](#main-features)
-    - [Navbar](#navbar)
+      - [Navbar](#navbar)
+      - [Footer](#footer)
     - [Homepage](#homepage)
-    - [Product List](#product-list)
-    - [Product Detail](#product-detail)
+    - [Products](#products)
+      - [Product List](#product-list)
+      - [Product Detail](#product-detail)
     - [About Us](#about-us)
       - [About Section](#about-section)
-      - [Bookings Section](#bookings-section)
+      - [Testimonials Section](#testimonials-section)
+    - [Bag](#bag)
+    - [Checkout](#checkout)
     - [User Profiles](#user-profiles)
+      - [Product Management](#product-management)
       - [Register](#register)
       - [Login](#login)
       - [Log out](#log-out)
       - [Wishlist](#wishlist)
       - [Order History](#order-history)
-      - [Product Management](#product-management)
     - [Message Alerts](#message-alerts)
     - [Error Page](#error-page)
   - [Future Features](#future-features)
@@ -70,40 +75,59 @@ To view the site please follow the link below:
 
 # OBJECTIVES
 The aim for this ecommerce site is for users to be able to view and purchase a number of different hats which have been added by the Admin.
-Users are also encouraged to create an account so they can leave testimonials, and add items to their wishlist which is accessible in their profile.
+
+Users are encouraged to create an account so they can leave testimonials and add items to their wishlist which is accessible in their profile.
 
 [Back to top](#contents)
 
 ## SITE OWNER GOALS
-The aim is for the admin to have full control over what is displayed on the website and be able to update its contents they want.
-The site’s admin has access to the admin panel where they can upload products to their site and add descriptions for them. From here they can also access the content displayed on the About page, as well as approving any testimonials submitted by users.
+The aim for the admin is to have full control over what is displayed on the website and be able to update any content theyon it.
+
+The site’s admin has access to the admin panel where they can upload products to the site and add descriptions for them. From here they can also access the content displayed on the About page, as well as approving any testimonials submitted by users.
 
 [Back to top](#contents)
 
 
 ## VISITOR GOALS
-Users visiting the site will be able to create an account and log into it, view and search for products, visit the About page, and submit testimonials which the Admin will review. 
-Users who view a specific product are able to add this item to their bag and complete a purchase.
+Users who have already created an account can log into it, add any product they see on the site to their personal wishlist and submit testimonials for the Admin to review.
+
+Users with an account are also able to view previous orders made on the site and update their profile's details.
+
 [Back to top](#contents)
 
 
 ### FIRST TIME VISITORS
-When users first visit the site the homepage will be displayed. From here they can use the navbar to navigate over to the products section or the About us page. 
-From the navbar they can also follow the link to register and create an account. Once an account is created they can access their wishlist and leave testimonials.
-[Back to top](#contents)
+When users first visit the site, they will land on the homepage. The layout is very simplistic and users can navigate the site using the links in the navbar, or proceed directly to the products page by clicking on the "View Headwear" button.
+
+There are prompts throughout the site to encourage users to create an account. For example when a user is viewing products, if they access and look at a particular product's description they will see that the product they are currently on could be added to their wishlist if they had an account. The same prompt is used in the About us section, where users can view all the approved testimonials, but they can only submit one if they have an account.
 
 
 ### RETURNING VISITORS
 Users who have already visited the site and created an account will be able to log into it. They will also see a message displayed informing them of their log in status.
+
+They will be able to access their profile to view and update their details, view their order history, view their wishlist and submit testimonials.
+
 [Back to top](#contents)
 
 
 ## BUSINESS MODEL
+The business model for Lightheadedandco is purely B2C based. Lightheadedandco will cater to the general public, and as such anyone who visits the site could be a potential customer.
+
+One of the first things users will see is a form on the site's homepage encouraging them to sign up to the newsletter. The intention is to increase potential visits to the site, which should ultimately also increase the sales.
+
+Included at the bottom of the homepage users will also see links from which they can access the company's Facebook Page
+
+![Lightheadedandco Facebook Page](readme/assets/images/facebook_page.png)
+
+The site is built with the idea of making the admin's job as easy as possible should they want to amend, add or delete any of the content. This ensures that any changes can be carried out as easily as possible with a minimum impact to the business model.
 
 [Back to top](#contents)
 
 
 ## MARKETING TECHNIQUES
+The main marketing technique used for this application is an email subscription. Users will see on the homepage a form where they can enter their email to receive updates on new products. The aim here is to increase user engagement and visits to the site. 
+
+When users are notified of something new they haven't seen before, the likelihood is that they will want to visit the site so they can view these new items and hopefully complete a purchase or add them to their wishlist.
 
 [Back to top](#contents)
 
@@ -111,7 +135,7 @@ Users who have already visited the site and created an account will be able to l
 ## PROJECT MANAGEMENT
 
 ### GITHUB PROJECTS
-Github Projects was used to plan and keep track of the project's development.
+Github Projects was the platform used to set up tasks and keep track of the project's development.
 
 A link to the Project site can be found below:
 
@@ -120,41 +144,33 @@ A link to the Project site can be found below:
 The Kanban Board helped to keep track of user stories, acceptance criteria, and which tasks to work on at a time.
 
 
-
 ### MODELS USED
-<details><summary><b>Products App</b></summary>
-
-![Event Model](readme/assets/images/event_model.png)
-
-![Comment Model](readme/assets/images/comment_model.png)
-</details><br/>
-
-<details><summary><b>Bag App</b></summary>
-
-![Event Model](readme/assets/images/event_model.png)
-
-![Comment Model](readme/assets/images/comment_model.png)
-</details><br/>
-
-<details><summary><b>Checkout App</b></summary>
-
-![Event Model](readme/assets/images/event_model.png)
-
-![Comment Model](readme/assets/images/comment_model.png)
-</details><br/>
-
 <details><summary><b>About App</b></summary>
 
 ![About Model](readme/assets/images/about_model.png)
 
-![Booking Request Model](readme/assets/images/booking_request_model.png)
+![Testimonials Model](readme/assets/images/testimonials_model.png)
+</details><br/>
+
+<details><summary><b>Checkout App</b></summary>
+
+![Order Model](readme/assets/images/order_model.png)
+
+![OrderLineItem Model](readme/assets/images/orderlineitem_model.png)
+</details><br/>
+
+<details><summary><b>Products App</b></summary>
+
+![Category Model](readme/assets/images/category_model.png)
+
+![Product Model](readme/assets/images/product_model.png)
 </details><br/>
 
 <details><summary><b>Profile App</b></summary>
 
-![Event Model](readme/assets/images/event_model.png)
+![UserProfile Model](readme/assets/images/userprofile_model.png)
 
-![Comment Model](readme/assets/images/comment_model.png)
+![Wishlist Model](readme/assets/images/wishlist_model.png)
 </details><br/>
 
 [Back to top](#contents)
@@ -163,14 +179,13 @@ The Kanban Board helped to keep track of user stories, acceptance criteria, and 
 # USER EXPERIENCE
 
 ## USER STORIES
-Before adding to the Kanban board, all the user stories were documented in a Google Sheet.
-- [User Stories](readme/assets/documents/User_stories_helper_doc.pdf)
-These were then assigned labels using Github Issues and assigned a priority using MoSCoW.
+User stories were initially documented in a Google Sheet which is linked below:
 
+- [User Stories](readme/assets/documents/user_stories.pdf)
 
+These were then prioritised using the MoSCoW method and assigned labels using Github Issues.
 
-- [Github Issues]()
-
+- [Github Issues](https://github.com/JoeOrtiz1995/Lightheadedandco/labels)
 
 [Back to top](#contents)
 
@@ -180,8 +195,13 @@ The initial wireframes for the site were created using [Balsamiq](https://balsam
 
 <details><summary><b>Balsamiq Wireframes</b></summary>
 
-![Homepage Card View](readme/assets/images/homepage_card_view.png)
+![Homepage](readme/assets/images/homepage_card_view.png)
 
+![Products Page](readme/assets/images/products_page.png)
+
+![About Us Page](readme/assets/images/about_us_page.png)
+
+![Login Page](readme/assets/images/login_page.png)
 </details><br/>
 
 The site didn't end up looking quite like the wireframes were set up, however they still helped visualise a basic layout for the website.
@@ -190,27 +210,22 @@ The site didn't end up looking quite like the wireframes were set up, however th
 
 
 ## SITE STRUCTURE
-The site is set out so that users land on the homepage when they first visit. From here they can use the Navbar to navigate to the different sections of the site.
-All users can navigate the site and complete purchases, however only users who have created an account and are logged in can leave testimonials or access their profile to view their Order History and Wishlist.
+The site's structure can be split into four main sections:
 
 1. [Products](#products)
 2. [About Us](#about-us)
-3. [Profile](#profile). 
+3. [Profile](#profile)
 4. [Admin Site](#admin-site)
+
+All users can navigate the site and complete purchases, however only users who have created an account and are logged in can leave testimonials or access their profile to view their Order History and Wishlist.
 
 [Back to top](#contents)
 
 
 ## DESIGN CHOICES
-The colour scheme used in the design was inspired by the Lightheadedandco logo. It uses a very simple light theme which was chosen to make the lights in the LED hats stand out more.
+The colour scheme used in the design was inspired by the Lightheadedandco logo. It uses a very simple light theme which was chosen as it makes the colourful products listed stand out more - especially the LED hats.
 
-[coolors website](https://coolors.co/) was used to create the palette below.
-
-<details><summary><b>Lightheaded Colour Scheme</b></summary>
-
-![Coolors Colour Scheme]()
-
-</details><br/>
+- [LED Hats](readme/assets/images/led_hats.png)
 
 [Back to top](#contents)
 
@@ -220,104 +235,113 @@ The colour scheme used in the design was inspired by the Lightheadedandco logo. 
 ## MAIN FEATURES
 
 ### NAVBAR
-NAVBAR
-D-block & d-lg-none attributes hides the links on large screens (where they’ll be in the top bit of header), and only show on small screens
-Search form is in a dropdown format
-To improve layout on mobile devices the profile bit is a dropdown menu - ADD WISHLIST HERE 
-To improve layout on mobile devices 3rd button is to access
-Added icon to navbar which is hidden on mobile view
-Add menu options to Profile dropdown for wishlist and My orders. 
+The Navbar is what users will mainly use when navigating the site. 
 
-From the navbar a user can see whether they are logged in or not.
+If nothing is entered into the searchbar, the user will be taken to the products list page rather than display an error. If the user does search for something, they will be able to see all products containing what is being searched, even if they appear only on a product's description. This improves a User's experience on the site, as what they are looking for might not always match a product's name.
+
+If a user has an item in their bag, the total is displayed and they can access it via the link in the Navbar.
+
+Users can also use the Navbar to visit the About Us page, log in to their account or sign up to create a new one.
+
+The Navbar's layout and display is set up to act as a dropdown menu on Mobiles.
+
+![Navbar Desktop]()
+
+![Navbar Mobile]()
 
 
+### FOOTER
+The footer is displayed on most pages a user will see when navigating the site.
 
-![Navbar User Logged In](readme/assets/images/user_message_logged_in.png)
+From here Users can follow the links to the Business Facebook Page. Further links will be added in future.
 
-![Navbar User Logged Out](readme/assets/images/navbar_user_logged_out.png)
-
-[Back to top](#contents)
+![Footer]()
 
 ### HOMEPAGE
 When users visit the site, they will land on the homepage. 
-The structure for the homepage is very simple and contains a navbar with links for users to access the different pages of the site and log in or create an account.
-The homepage also has a button which takes users directly to the products list page.
 
-![User Logged In](readme/assets/images/event_page_user_logged_in.png)
+The structure for the homepage is very simple and contains a the navbar and a button which takes users directly to the products list page without having to access the navbar links.
 
-![User Logged Out](readme/assets/images/event_page_user_logged_out.png)
+Users will also find the newsletter sign-up form on the homepage.
+
+![Homepage Desktop](readme/assets/images/homescreen_desktop.png)
+
+![Homepage Mobile](readme/assets/images/homescreen_mobile.png)
 
 [Back to top](#contents)
 
 
 ### PRODUCTS
+
+#### PRODUCTS LIST
 There are two dropdown options on the navbar from which users can access the products page.
-This allows them to view all products in a specific category, as well as giving them the choice to view products sorted in various ways. 
-From the products list page, users have different options to sort the products. This allows users more control and clarity over what they are seeing.
-The page is set up to be responsive across different screen sizes, 
 
-They are able to click on any event, and this will take them to that event's page.
+This allows them to view all products in a specific category, as well as giving them the choice to view products sorted in various ways.
 
-[Back to top](#contents)
+Users are also able to sort the products on the products list page, allowing for more control over what they are seeing.
 
+Admins are able to edit or delete products directly from this page, as long as they are logged in.
 
-### INDIVIDUAL PRODUCTS
-This page displays to the users a specific product’s information. From here they can add the product to their bag and choose the quantity.
-On this page a users will see a full description of each products they've clicked on. 
+The page is set up to be responsive across different screen sizes.
 
-Only Admins are able to create, edit and delete events. They also have the ability to approve comments. 
+![Products List Desktop](readme/assets/images/products_desktop.png)
 
-Once a comment is approved it will be visible to all users who visit that event's page regardless if they're logged in or not.
+![Products List Mobile](readme/assets/images/mobile_product_view.png)
 
-#### EVENT DESCRIPTION
-This section contains the event's description below a banner with the event's date and a photo of the restaurant. Each event has its own description and users are encouraged to comment what they think.
+![Products List Admin](readme/assets/images/mobile_admin_product_view.png)
 
-![Event Description](readme/assets/images/event_description_page_user_logged_in.png)
+#### PRODUCT DETAIL
+This page displays a specific product’s information and from here users can add the item to their bag. The quantity buttons are set up so that users can't add less than 1 item or more than 99 to their bag.
 
-#### COMMENT SECTION
-The Comment section is below the event's description. 
+Users are also able to add items to their wishlist from this page. If a user isn't logged in they will see a message stating they need to have an account to add items to a wishlist. If a user is logged in and they have the item in their wishlist, the "Add to Wishlist" button is disabled and the text displayed will tell the user that they already have this item in their wishlist, and includes a link so they can access it withouth having to use the navbar.
 
-What users see will depend on their log in status. If they're not logged in they are able to see approved comments, but a message displayed will let them know that only logged in users are able to leave a comment.
+![Products Detail Desktop]()
 
-Logged in users will also be able to see all the approved comments as well as any unapproved comments they have posted. Users are able to edit and delete any of their comments.
-
-- #### ADDING COMMENTS
-Only a logged in user is able to add comments, and a message is displayed to make them aware. 
-
-![Comments Section User Logged Out](readme/assets/images/comments_user_logged_out.png)
-
-- #### EDITING COMMENTS
-Logged in users are also able to edit their own comments. If they edit an approved comment, this new edited comment would not be automatically approved and would have to be reviewed and approved by an admin first.
-
-- #### DELETING COMMENTS
-Logged in users are able to delete their comments. When looking to delete a comment they will be asked to confirm their decision before the deletion is carried. This was done so as to minimise any unintended deletions.
-
-![Comments Section User Logged In](readme/assets/images/comments_user_logged_in.png) 
+![Products Detail Mobile]()
 
 [Back to top](#contents)
 
 
-### BOOKINGS
-This page contains the About section and the form for users to submit a booking request.
+### ABOUT US
 
-#### ABOUT US
-The About us page contains information on Lightheadedandco and a section for testimonials. Users will see all approved testimonials as a list, and they can leave testimonials if they have an account and are logged in.
+#### ABOUT
+The About us page contains information on Lightheadedandco and a section for testimonials.
 
-Admins can edit the text through the admin panel, and the page has been set up so that only the most recent updated version is shown.
+Admins can edit the About section's content through the admin panel, and the page has been set up so that only the most recent updated version is shown.
 
-![About Section User Logged In](readme/assets/images/bookings_page.png)
+![About Section User Logged Out](readme/assets/images/about_us_logged_out.png)
+
+Users will see all approved testimonials as a list, and they can leave testimonials if they have an account and are logged in.
 
 #### TESTIMONIALS
 Logged in users are able to submit testimonials when they visit the About us page.
 
-![Bookings Section User Logged In](readme/assets/images/bookings_form_user_logged_out.png)
+![About Section User Logged In](readme/assets/images/unapproved_testimonials_hidden.png)
 
-- #### SUBMIT A TESTIMONIAL
-Only users who are logged in can submit testimonials. The admin can access them in the Admin Panel and from here they can be reviewed. 
-Any approved testimonials will be displayed to users on the About us page, regardless of their login status. 
-Users who have submitted a testimonial which hasn’t been approved by the admin will see a message to confirm this.
+All testimonials submitted will have to be approved by the admin before they're visible to all users. Users are able to edit and delete their own testimonials.
 
-![Bookings Section User Logged In](readme/assets/images/bookings_form_user_logged_in.png)
+Any approved testimonials will be displayed to users on the About us page, regardless of their login status. However, users who aren't logged in will still be able to see approved testimonials, but instead of the text box they'll see a message with links to the sign-up pages.
+
+Users who have submitted a testimonial which hasn’t been approved by the admin will see a message stating it's being reviewed.
+
+![About Section Unapproved Testimonial](readme/assets/images/unapproved_testimonials_visible.png)
+
+[Back to top](#contents)
+
+
+### BAG
+Users who navigate to the Bag section without having anything added will see a mesage stating this, and will be redirected to the products page.
+
+![Bag Page Desktop]()
+
+![Bag Page Mobile]()
+
+[Back to top](#contents)
+
+
+### CHECKOUT
+The 
+
 
 [Back to top](#contents)
 
@@ -325,9 +349,9 @@ Users who have submitted a testimonial which hasn’t been approved by the admin
 ## USER PROFILES
 A message displayed to users across all pages lets them know whether they're logged in or not.
 
-![User Logged Out](readme/assets/images/user_message_logged_out.png)
+![User Logged Out]()
 
-![User Logged In](readme/assets/images/user_message_logged_in.png)
+![User Logged In]()
 
 ### REGISTER
 When a user visits the registration page they will be asked for a Username and Password. Once they've created the account they'll be redirected back to the homepage.
@@ -341,6 +365,10 @@ If a user has registered previously they will be able to log in using the link o
 Once a user has registered and/or logged into their account, they will have a link in the nav bar to log out.
 
 ### ADMIN PANEL
+
+*****All the information, images and pricing can be updated by the admin. They can do this directly on the site, or by accessing the admin panel. They are also able to add and delete products directly.*****
+
+
 Verbose name added to Categories model for clarity.
 This site was created with the intention of staff being able to review the content displayed on their site. 
 
@@ -360,8 +388,9 @@ Whenever a user submits a request such as leaving or editing a comment, or sendi
 
 <details><summary><b>User Messages on Booking Form</b></summary>
 
-![Booking Submitted](readme/assets/images/booking_submitted.png)
-![Booking Failed to Submit](readme/assets/images/booking_submitted_fail.png)
+![Booking Submitted]()
+
+![Booking Failed to Submit]()
 </details><br/>
 
 <details><summary><b>User messages when editing or deleting Comments</b></summary>
@@ -432,7 +461,14 @@ There are a number of features which unfortunately have not been able to be impl
 
 - [PEP8 Validation](http://pep8online.com/) - Used to validate Python code.
 
-- [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code
+- [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code.
+
+- [AWS](https://aws.amazon.com/) - Used to store static and media folders and files.
+
+- [Mailchimp](https://mailchimp.com/) - Used to create the sign up form.
+
+- [Stripe](https://stripe.com/gb) - Used to process payments 
+ and to test the checkout process worked.
 
 [Back to top](#contents)
 
@@ -442,7 +478,7 @@ There are a number of features which unfortunately have not been able to be impl
 ## TESTING USER STORIES
 A complete list of the User Stories can be found here: 
 
-- [User Stories Log]()
+- [User Stories Log](readme/assets/documents/user_stories.pdf)
 
 [Back to top](#contents)
 
@@ -451,16 +487,15 @@ A complete list of the User Stories can be found here:
 The code was ran on the following validation sites:
 
 - [HTML Validation](https://validator.w3.org/) - Ran and returned no errors
-<details><summary><b>HTML Validator Results</b></summary>
-
-![HTML Validator Results](readme/assets/images/HTML_Validator.png)
-</details><br/>
 
 - [CSS Validation](https://jigsaw.w3.org/css-validator/) - Ran and returned no errors
 
-- [PEP8 Validation](http://pep8online.com/) - The Views, Admin, Model and Form files were checked using the CI Python Linter.
+![CSS Validator Results]()
+</details><br/>
 
-- [JSHint Validation](https://jshint.com/) - Running the comments.js file returned just one error. There is an undefined variable connected to Bootstrap, however this is not an issue.
+- [PEP8 Validation](http://pep8online.com/) - The full app was checked against PEP8 requirements and meets them. However the migration files and the settings file do show up as having lines longer than 79 characters. I have been unable to fix this issue on the settings file, as modifying this line prevents heroku from deploying the application.
+
+- [JSHint Validation](https://jshint.com/) - Running the comments.js file returned no errors.
 
 [Back to top](#contents)
 
@@ -472,9 +507,9 @@ The code was ran on the following validation sites:
 <details><summary><b>Lighthouse Results</b></summary>
 
 
-![Lighthouse Results Index](readme/assets/images/lighthouse_results.png)
-![Lighthouse Results Event](readme/assets/images/lighthouse_results_event.png)
-![Lighthouse Results Bookings](readme/assets/images/lighthouse_results_bookings.png)
+![Homepage Lighthouse Results](readme/assets/images/homepage_lighthouse_checks.png)
+![Products Page Lighthouse Results](readme/assets/images/products_lighthouse_checks.png)
+![About Page Lighthouse Results](readme/assets/images/about_lighthouse_checks.png)
 </details><br/>
 
 ### BROWSER COMPATIBILITY
@@ -504,21 +539,13 @@ The steps taken to deploy the application were as follows:
 
 1. Accessed the Heroku website and logged into my account. If you don't have an account you can follow [this link](https://signup.heroku.com/login) to create one.
 
-![Heroku Dashboard](readme/assets/images/heroku_dashboard.png)
-
 2. On the dashboard click on "New", and then "Create new app".
 
 3. I chose an app name (lightheadedandco), changed the region to "Europe" and clicked "Create app".
 
-![Heroku Create App](readme/assets/images/heroku_create_app.png)
-
 4. Once this is done, navigate over to the "Settings" section and click on "Reveal Config Vars". Enter any config vars required.
 
-![Heroku Config Vars](readme/assets/images/heroku_config_vars.png)
-
 5. Go back over to the "Deploy" section and link your GitHub account by clicking on the GitHub button. Sign in to your GitHub account if necessary, and once this is done type the name of the repository you want to deploy and search for it using the Search button. Once you've found it press "Connect". This will link the Heroku app to the code in GitHub.
-
-![Heroku Link to GitHub](readme/assets/images/heroku_github_link.png)
 
 7. There are two ways of finalising the application's deployment. At the bottom of the "Deploy" section, you will find an "Automatic deploys" and a "Manual deploy" subsection and you'll have to choose which method you'd prefer. The main difference between these options is that the Manual deploy option deploys the application by running the current code, however if any changes are made these will not be reflected until another Manual deploy is actioned. I've added links for further information about both of these options below.
 
@@ -526,7 +553,7 @@ The steps taken to deploy the application were as follows:
 
     - [Heroku Manual Deploys](https://devcenter.heroku.com/articles/github-integration#manual-deploys)
 
-8. On this occasion I chose the Manual deploys option.
+8. On this occasion I chose the Automatic deploys option.
 
 9. Once the deployment has finished, a message will appear to confirm this above a button that says "View" which will take you to the deployed application. You can also click on open app at the top of the Page.
 
@@ -561,6 +588,7 @@ To clone this project follow the steps listed below:
 # CREDIT
 ## CONTENT CREDIT
 The concept for this project came from one of my friends who is looking to start a business selling LED hats, and he kindly shared the images for the LED hats and the logo.
+
 The content was created by myself, however I did rely on the Boutique Ado Walkthrough to help with the building process.
 
 [Back to top](#contents)
