@@ -203,7 +203,7 @@ The initial wireframes for the site were created using [Balsamiq](https://balsam
 ![Login Page](readme/assets/images/login_page.png)
 </details><br/>
 
-The site didn't end up looking quite like the wireframes were set up, however they still helped visualise a basic layout for the website.
+Although the site didn't end up looking exactly like the wireframes, they were still helpful to visualise the layout for the website.
 
 [Back to top](#contents)
 
@@ -224,7 +224,7 @@ All users can navigate the site and complete purchases, however only users who h
 ## DESIGN CHOICES
 The colour scheme used in the design was inspired by the Lightheadedandco logo. It uses a very simple light theme which was chosen as it makes the colourful products listed stand out more - especially the LED hats.
 
-- [LED Hats](readme/assets/images/led_hats.png)
+![LED Hats](readme/assets/images/led_hats.png)
 
 [Back to top](#contents)
 
@@ -244,9 +244,7 @@ Users can also use the Navbar to visit the About Us page, log in to their accoun
 
 The Navbar's layout and display is set up to act as a dropdown menu on Mobiles.
 
-![Navbar Desktop]()
-
-![Navbar Mobile]()
+![Navbar Mobile](readme/assets/images/mobile_nav_dropdown.png)
 
 
 ### FOOTER
@@ -254,7 +252,6 @@ The footer is displayed on most pages a user will see when navigating the site.
 
 From here Users can follow the links to the Business Facebook Page. Further links will be added in future.
 
-![Footer]()
 
 ### HOMEPAGE
 When users visit the site, they will land on the homepage. 
@@ -271,7 +268,6 @@ Users will also find the newsletter sign-up form on the homepage.
 
 
 ### PRODUCTS
-
 #### PRODUCTS LIST
 There are two dropdown options on the navbar from which users can access the products page.
 
@@ -281,28 +277,27 @@ Users are also able to sort the products on the products list page, allowing for
 
 Admins are able to edit or delete products directly from this page, as long as they are logged in.
 
+![Products List Admin](readme/assets/images/mobile_admin_product_view.png)
+
 The page is set up to be responsive across different screen sizes.
 
 ![Products List Desktop](readme/assets/images/products_desktop.png)
 
 ![Products List Mobile](readme/assets/images/mobile_product_view.png)
 
-![Products List Admin](readme/assets/images/mobile_admin_product_view.png)
-
 #### PRODUCT DETAIL
 This page displays a specific product’s information and from here users can add the item to their bag. The quantity buttons are set up so that users can't add less than 1 item or more than 99 to their bag.
 
 Users are also able to add items to their wishlist from this page. If a user isn't logged in they will see a message stating they need to have an account to add items to a wishlist. If a user is logged in and they have the item in their wishlist, the "Add to Wishlist" button is disabled and the text displayed will tell the user that they already have this item in their wishlist, and includes a link so they can access it withouth having to use the navbar.
 
-![Products Detail Desktop]()
+![Products Detail Desktop](readme/assets/images/product_detail_desktop.png)
 
-![Products Detail Mobile]()
+![Products Detail Mobile](readme/assets/images/product_detail_extended_mobile.png)
 
 [Back to top](#contents)
 
 
 ### ABOUT US
-
 #### ABOUT
 The About us page contains information on Lightheadedandco and a section for testimonials.
 
@@ -331,15 +326,17 @@ Users who have submitted a testimonial which hasn’t been approved by the admin
 ### BAG
 Users who navigate to the Bag section without having anything added will see a mesage stating this, and will be redirected to the products page.
 
-![Bag Page Desktop]()
-
-![Bag Page Mobile]()
+![Bag Page Mobile](readme/assets/images/mobile_bag.png)
 
 [Back to top](#contents)
 
 
 ### CHECKOUT
-The 
+Once users have decided on a product they want to buy and proceed to the checkout page, they will be prompted to enter some personal information and their card details.
+
+The card payments are processed through Stripe, and any errors in the form which prevent its submission, such as missing or incorrect details will be displayed to the user.
+
+![checkout Page](readme/assets/images/bag_desktop.png)
 
 
 [Back to top](#contents)
@@ -348,62 +345,69 @@ The
 ## USER PROFILES
 A message displayed to users across all pages lets them know whether they're logged in or not.
 
-![User Logged Out]()
+![User Logged Out](readme/assets/images/logout_message.png)
 
-![User Logged In]()
+![User Logged In](readme/assets/images/login_message.png)
+
+
+### PRODUCT MANAGEMENT
+If the user logged in is an admin, they are able to access the product management page directly from the dropdown on the navbar. 
+
+This allows admins to edit, add or delete any product listed without having to access the admin panel.
+
 
 ### REGISTER
-When a user visits the registration page they will be asked for a Username and Password. Once they've created the account they'll be redirected back to the homepage.
+When a user visits the registration page they will be asked for a Username, Password and email address. Once they've confirmed their email is correct by following the link in the email received they'll be able to access the log in page and visit their profile.
 
-There are links to the Login page for users who already have an account.
 
 ### LOGIN
-If a user has registered previously they will be able to log in using the link on the nav bar, however they can also use the Remember Me feature so they are automatically logged in whenever they visit the site.
+If a user has registered previously they will be able to log in using the link on the nav bar dropdown.
+
+A Remember Me button is present on the log in page to make this process easier.
+
+![Login Page](readme/assets/images/desktop_login.png)
+
+![Logged in message](readme/assets/images/login_message.png)
+
 
 ### LOG OUT
-Once a user has registered and/or logged into their account, they will have a link in the nav bar to log out.
+Once a user has registered and/or logged into their account, they can log out via a link in the nav bar.
 
-### ADMIN PANEL
-
-*****All the information, images and pricing can be updated by the admin. They can do this directly on the site, or by accessing the admin panel. They are also able to add and delete products directly.*****
+![Logged out message](readme/assets/images/logout_message.png)
 
 
-Verbose name added to Categories model for clarity.
-This site was created with the intention of staff being able to review the content displayed on their site. 
+### WISHLIST
+Once users have an account, they can start adding items to their wishlist and they can view the wishlist in their profile.
 
-From here they can:
-- Add, view, edit and delete events.
-- Review comments by submitted by users.
-- Approve booking requests.
-- Update the About section's content.
+![Wishlist](readme/assets/images/wishlist.png)
 
-This gives them full CRUD capabilities on the site. Some of the fields staff are able to amend have been improved by implementing Summernote, which enables rich-text editing.
+From here they are able to follow the link to view that product's detail or remove products from the list.
+
+Any amendments to the wishlist is displayed to the user allowing for a better experience.
+
+### ORDER HISTORY
+From their profile page, users can also view any previous orders they have made and also update any of their details stored.
+
+![User's Profile](readme/assets/images/user_profile.png)
+
+![Order History](readme/assets/images/checkout_successful.png)
 
 [Back to top](#contents)
 
 
 ## MESSAGE ALERTS
-Whenever a user submits a request such as leaving or editing a comment, or sending a booking form, a message will appear on the screen to let them know if it has been possible.
+Users will see error messages displayed whenever a request is submitted to the server. This includes adding products to their bag or wishlist, removing items form these, updating their details, and whenever they edit, delete or submit a testimonial.
 
-<details><summary><b>User Messages on Booking Form</b></summary>
+Some example messages are shown below:
 
-![Booking Submitted]()
+![Product Removed Successfully Message](readme/assets/images/mobile_message_success.png)
 
-![Booking Failed to Submit]()
-</details><br/>
-
-<details><summary><b>User messages when editing or deleting Comments</b></summary>
-
-![Blank Comment Message]()
-![Comment Deleted]()
-![Comment Update Error]()
-![Comment Updated]()
-</details><br/>
+![Testimonial Updated Successfully Message](readme/assets/images/testimonial_update_message.png)
 
 ## ERROR PAGE
 A user would only see this page if an incorrect URL is entered. They will see a message on the page and a button to take them back to the home page. The Navbar links also work the same here as they do throughout the site.
 
-![Error Page]()
+![Error Page](readme/assets/images/error_page.png)
 
 [Back to top](#contents)
 
