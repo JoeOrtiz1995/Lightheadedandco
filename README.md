@@ -57,9 +57,8 @@ To view the site please follow the link below:
 
 - [TESTING](#testing)
   - [Manual Testing](#manual-testing)
-  - [External Testing](#external-testing)
   - [Performance & Accessibility](#performance--accessibility)
-  - [Validator Testing](#validator-testing)
+  - [Code Validation](#code-validation)
   - [Troubleshooting](#troubleshooting)
 
 - [PROJECT DEPLOYMENT](#project-deployment)
@@ -395,16 +394,16 @@ Whenever a user submits a request such as leaving or editing a comment, or sendi
 
 <details><summary><b>User messages when editing or deleting Comments</b></summary>
 
-![Blank Comment Message](readme/assets/images/blank_comment_message.png)
-![Comment Deleted](readme/assets/images/cmment_deleted.png)
-![Comment Update Error](readme/assets/images/comment_update_error.png)
-![Comment Updated](readme/assets/images/comment_update.png)
+![Blank Comment Message]()
+![Comment Deleted]()
+![Comment Update Error]()
+![Comment Updated]()
 </details><br/>
 
 ## ERROR PAGE
 A user would only see this page if an incorrect URL is entered. They will see a message on the page and a button to take them back to the home page. The Navbar links also work the same here as they do throughout the site.
 
-![Error Page](readme/assets/images/error_page.png)
+![Error Page]()
 
 [Back to top](#contents)
 
@@ -412,8 +411,25 @@ A user would only see this page if an incorrect URL is entered. They will see a 
 ## FUTURE FEATURES
 There are a number of features which unfortunately have not been able to be implemented at this stage such as:
 
-
 - Users being able to delete their account.
+
+- Users being able to share wishlists.
+
+- Users leaving reviews on products.
+
+- Fixing the footer as it was completely blocking some elements on the page.
+
+- I'm not happy with some elements' responsiveness across various sizes and I would want to improve this in future.
+
+- Add more links to the footer.
+
+- I don't like the placement for the mailchimp subscription page, but I've had no time to amend the footer or create a page specifically for this, although in hindsight the About Us page might have also been a good place for it.
+
+- I'd also like to improve the Error page's message and styling.
+
+- Include more error pages, not just a 404 error page.
+
+- One of my friends who i got to test the site noticed that if you sort products and then view a product, if they go back, the products aren't sorted anymore. I'd like to implement a return view which renders the products list page sorted in the same way 
 
 [Back to top](#contents)
 
@@ -474,11 +490,40 @@ There are a number of features which unfortunately have not been able to be impl
 
 
 # TESTING
-
-## TESTING USER STORIES
+## MANUAL TESTING
 A complete list of the User Stories can be found here: 
 
 - [User Stories Log](readme/assets/documents/user_stories.pdf)
+
+Each user story was tested to ensure all the tasks were met.
+
+- Signup & Login: Users can create an account and log in, and they are notified when they log in or out.
+
+- Logout: Users can log out successfully and are notified.
+
+- Product Browsing: Products load correctly and categories function as expected. A bug causing the overlay to not completely cover the products has been resolved
+
+- Search Bar: Users can search for products, and relevant results are displayed.
+
+- Add to Wishlist: Users can add and remove products from their wishlist and are notified.
+
+- View Wishlist Item: The view item button works and users are directed to that product's page.
+
+- Add to Cart & Checkout: Users can add items to their cart and complete a purchase. This was tested using Stripe webhooks throughout deployment, and once the build was finished it was tested again and returned no errors.
+
+- Checkout: Incorrect details entered or failing to add required information causes an error message to be displayed to the user.
+ 
+- Profile Update: Users can update their personal information and will see a message confirming this.
+
+- Testimonial Submission & Editing: Users can submit and edit testimonials.
+
+- Testimonial Visibility: Users who are not logged in will only see approve testimonials.
+
+- Testimonial Visibility: Users who are logged in will also see any testimonial they have submitted which may be unapproved, and there is a message stating this.
+
+- Testimonial Handling: Users can only edit or delete their own testimonials.
+
+- Testimonial Handling: All approved testimonials are visible and all unapproved testimonials are hidden.
 
 [Back to top](#contents)
 
@@ -490,7 +535,7 @@ The code was ran on the following validation sites:
 
 - [CSS Validation](https://jigsaw.w3.org/css-validator/) - Ran and returned no errors
 
-![CSS Validator Results]()
+![CSS Validator Results](readme/assets/images/css_validator_results.png)
 </details><br/>
 
 - [PEP8 Validation](http://pep8online.com/) - The full app was checked against PEP8 requirements and meets them. However the migration files and the settings file do show up as having lines longer than 79 characters. I have been unable to fix this issue on the settings file, as modifying this line prevents heroku from deploying the application.
@@ -500,12 +545,10 @@ The code was ran on the following validation sites:
 [Back to top](#contents)
 
 
-## PERFORMANCE & ACCESSIBILITY TESTS
+## PERFORMANCE & ACCESSIBILITY
 
 ### LIGHTHOUSE CHECKS
-
 <details><summary><b>Lighthouse Results</b></summary>
-
 
 ![Homepage Lighthouse Results](readme/assets/images/homepage_lighthouse_checks.png)
 ![Products Page Lighthouse Results](readme/assets/images/products_lighthouse_checks.png)
@@ -525,6 +568,13 @@ The application was tested on the following browsers and it ran without any issu
 
 
 ## TROUBLESHOOTING & BUGS
+There are no current bugs affecting the project which I am aware of. However, the responsiveness across different screen sizes could be improved.
+
+There was an issue which occurred a few days ago where a stray div with no closing div on the base template was preventing any scrolling on the site. This is now resolved.
+
+There was a last minute issue today, where the footer was covering some page's content. Most of the content affected is now being displayed, however on a couple of pages the footer was removed completely.
+
+As mentioned before, this is an feature I would like to improve in future.
 
 
 [Back to top](#contents)
@@ -611,16 +661,18 @@ Most of the other pictures used came from [Freeimages](https://www.freeimages.co
 
 The hats used in the Kds section came from [Freepik](https://www.freepik.com/):
 
-- [Freepik](https://www.freepik.com/free-photo/pretty-blue-hat_976050.htm#from_view=detail_alsolike)
+- [Kids Fedora](https://www.freepik.com/free-photo/pretty-blue-hat_976050.htm#from_view=detail_alsolike)
 
-- [Freepik](https://www.freepik.com/free-psd/studio-portrait-young-girl-with-red-beanie_38077038.htm#fromView=search&page=1&position=2&uuid=a6eba289-42be-439d-adda-42c9ef2c806d&new_detail=true)
+- [Kids Beanie](https://www.freepik.com/free-psd/studio-portrait-young-girl-with-red-beanie_38077038.htm#fromView=search&page=1&position=2&uuid=a6eba289-42be-439d-adda-42c9ef2c806d&new_detail=true)
 
-- [Freepik](https://www.freepik.com/free-photo/blue-winter-knit-ski-hat-isolated-white_21128648.htm#from_view=detail_alsolike)
+- [Kids Bobble Hat](https://www.freepik.com/free-photo/blue-winter-knit-ski-hat-isolated-white_21128648.htm#from_view=detail_alsolike)
 
 Baseball cap photos credits:
 
-Photo by Ahmed Syed on (https://unsplash.com/photos/man-in-gray-cap-6NVrH0HB_DE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-Photo by Case Hubbart on (https://unsplash.com/photos/four-assorted-fitted-caps-on-shelf-nEd_14IuaZE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+Photo by Ahmed Syed on [Unsplash](https://unsplash.com/photos/man-in-gray-cap-6NVrH0HB_DE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+Photo by Case Hubbart on [Unsplash](https://unsplash.com/photos/four-assorted-fitted-caps-on-shelf-nEd_14IuaZE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
 [Back to top](#contents)
 
 
